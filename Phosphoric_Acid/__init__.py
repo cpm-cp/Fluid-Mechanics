@@ -1,5 +1,5 @@
 import tkinter as tk
-from math import pi
+import math
 from scipy.optimize import fsolve
 from tools.Pipe.pipe_choice import choice_type_pipe
 
@@ -17,7 +17,7 @@ def calcular_diametro():
     # Definir la función que representa el sistema de ecuaciones
     def sistema_ecuaciones(x):
         D, V = x
-        ecuacion_cuadratica = (pi / 4) * D**2 * V - 2.12*10**-4
+        ecuacion_cuadratica = (math.pi / 4) * D**2 * V - 2.12*10**-4
         ecuacion_lineal = ((V * D ) / (1.67712*10**-7)) - 8000
         return [ecuacion_cuadratica, ecuacion_lineal]
 
